@@ -33,10 +33,10 @@ def isConnected():
     """Tries to create a connection to google.com, if this fails return False"""
     try:
         socket.create_connection(("www.google.com", 80))
-        print("Online!")
+        #print("Online!")
         return True
     except:
-        print("Offline :(")
+        #print("Offline :(")
         return False
 
 def generateEmail(timeOffline, starTimeStr, endTimeStr, machine_name):
@@ -89,6 +89,7 @@ if __name__ == "__main__":
 
     else:
         print("Error: 'config.cfg' is missing.")
+		exit()
 
     tick_start = int(time.time())
     next_tick = tick_start + interval
